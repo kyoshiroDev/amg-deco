@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 
@@ -14,10 +15,9 @@ function App() {
 
 	return (
 		<div className="App">
-			<Header routes={routes} />
-			<main className="main-contenaire">
-				<h1>Mon Site</h1>
-			</main>
+			<Routes>
+				<Route path="/" element={<Header routes={routes} />} />
+			</Routes>
 		</div>
 	);
 }
