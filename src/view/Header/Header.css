@@ -125,6 +125,7 @@ header {
 
 @media screen and (min-width: 750px) {
 	header {
+    position: relative;
 		height: 100px;
 	}
 	.navbar-links {
