@@ -1,7 +1,17 @@
-
-
 .App{
+  width: auto;
   height: 100vh;
   box-sizing: border-box;
+}
+
+.container {
+	height: 100%;
+	width: auto;
+}
+
+@media screen and (min-width: 750px) {
+	.container {
+		margin-top: 100px;
+	}
 }
 

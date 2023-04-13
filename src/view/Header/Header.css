@@ -7,8 +7,8 @@
 	font-size: 62.5%;
 }
 
-.container {
-	height: 100vh;
+header {
+	width: 100%;
 }
 
 .navbar-logo {
@@ -17,7 +17,7 @@
 	justify-content: space-between;
 	position: fixed;
 	width: 100%;
-	min-height: 75px;
+	height: 80px;
 	padding: 0 20px;
 	background: #fff;
 	font-size: 2rem;
@@ -25,25 +25,24 @@
 /* Bouton Burger */
 
 .btn-burger {
-  display: block;
-  background-color: #fff;
-  border: none;
+	display: block;
+	background-color: #fff;
+	border: none;
 	width: 50px;
 	height: 50px;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .burger-bar,
 .burger-bar::after,
 .burger-bar::before {
 	display: block;
-  margin: auto;
+	margin: auto;
 	width: 30px;
 	height: 3px;
 	position: relative;
 	border-radius: 3px;
 	background-color: black;
-
 }
 
 .burger-bar::after,
@@ -65,8 +64,10 @@
 .navbar {
 	display: flex;
 	align-items: center;
-	height: 0;
-  transition: all, ease-in-out, 0.5s;
+	width: 100%;
+	height: 0px;
+	transition: all, ease-in-out, 0.5s;
+	background-color: #fff;
 }
 
 .navbar-links {
@@ -83,7 +84,14 @@
 	color: #000000;
 	cursor: pointer;
 	font-size: 1.5rem;
-  transition: ease-in-out 0.2s;
+	transition: ease-in-out 0.2s;
+}
+
+.link-actif {
+	color: rgb(184, 66, 33);
+	cursor: pointer;
+	font-size: 1.5rem;
+	transition: ease-in-out 0.2s;
 }
 
 .navbar-burger {
@@ -101,4 +109,37 @@
 .show-navbar {
 	height: 100vh;
 	transition: all, ease-in-out, 0.5s;
+}
+
+@media screen and (min-width: 750px) {
+	header {
+		height: 100px;
+	}
+	.navbar-links {
+		position: fixed;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		width: 100%;
+		height: 300px;
+		margin-top: 150px;
+		padding-bottom: 50px;
+	}
+
+	.navbar-link {
+		margin-right: 30px;
+		background-color: #fff;
+	}
+
+	.btn-burger {
+		display: none;
+	}
+
+	.navbar-logo {
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0;
+		padding-top: 60px;
+		height: 200px;
+	}
 }

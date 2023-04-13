@@ -3,8 +3,8 @@ import "./Home.css";
 
 function Home() {
 	return (
-		<div className="container-home">
-			<h1>Bienvenue sur notre agence web</h1>
+		<div className="container">
+			<h2>Home</h2>
 		</div>
 	);
 }
