@@ -81,16 +81,20 @@ header {
 }
 
 .navbar-link {
+	display: flex;
 	color: #000000;
 	cursor: pointer;
 	font-size: 1.5rem;
 	transition: ease-in-out 0.2s;
 }
 
-.link-actif {
-	color: rgb(184, 66, 33);
+.active {
+	color: #000000;
 	cursor: pointer;
 	font-size: 1.5rem;
+	border-bottom: solid 1px rgb(0, 0, 0);
+	margin: auto;
+	padding-bottom: 3px;
 	transition: ease-in-out 0.2s;
 }
 
@@ -102,8 +106,15 @@ header {
 
 .navbar-link:hover {
 	font-size: 1.7rem;
-	transition: ease-in-out 0.2s;
 	color: rgb(184, 66, 33);
+	transition: all, ease-in-out 0.2s;
+}
+
+.active:hover {
+	font-size: 1.7rem;
+	color: rgb(184, 66, 33);
+	border-bottom: solid 1px rgb(184, 66, 33);
+	transition: all, ease-in-out 0.2s;
 }
 
 .show-navbar {
@@ -126,9 +137,9 @@ header {
 		padding-bottom: 50px;
 	}
 
-	.navbar-link {
+	.navbar-link,
+	.active {
 		margin-right: 30px;
-		background-color: #fff;
 	}
 
 	.btn-burger {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
 
 const Header = (props) => {
@@ -10,8 +10,7 @@ const Header = (props) => {
 	};
 
 	const location = useLocation();
-  console.log(location)
-
+	console.log(location);
 
 	const routes = [
 		{ titre: "ACCUEIL", to: "/Accueil" },
@@ -33,13 +32,14 @@ const Header = (props) => {
 				<ul className="navbar-links">
 					{routes.map((itm, i) => (
 						<li className="navbar-item" key={i}>
-							<Link
-								className="navbar-link"
-								isCurrentPage={location.pathname === `${itm.to}`}
+							<NavLink
+								className={({ isActive, isPending }) =>
+									isActive ? "active active:hover" : "navbar-link"
+								}
 								to={`${itm.to}`}
 							>
 								{itm.titre}
-							</Link>
+							</NavLink>
 						</li>
 					))}
 				</ul>
